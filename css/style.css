@@ -1,0 +1,114 @@
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+body {
+    font-family: 'Comfortaa';
+}
+
+.container {
+    width: 1070px;
+    margin: 0 auto;
+}
+
+.container .slider {
+    width: 100%;
+    margin: 50px 0;
+    position: relative;
+}
+
+.container .slider .items {
+    width: inherit;
+    line-height: 0;
+    display: none;
+    position: relative;
+}
+
+.container .slider .active {
+    display: block;
+}
+
+.container .slider .items img {
+    width: inherit;
+}
+
+.container .slider .items .title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: inherit;
+    padding: 20px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.container .slider .items .count {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.container .slider #prev,
+.container .slider #next {
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.container .slider #prev {
+    left: 1%;
+}
+
+.container .slider #next {
+    right: 1%;
+}
+
+.container .slider #prev:hover,
+.container .slider #next:hover {
+    font-size: 55px;
+    transition: 0.2s;
+}
+
+.container .slider #prev:active,
+.container .slider #next:active {
+    font-size: 45px;
+    transition: 0.2s;
+}
+
+.dot-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot-nav .dot {
+    display: inline-block !important;
+    width: 20px;
+    height: 20px;
+    background: grey;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.dot-nav .dot:hover {
+    transform: scale(1.08);
+}
+
+.dot-nav .clicked {
+    background: white;
+}
