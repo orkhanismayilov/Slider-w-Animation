@@ -2,7 +2,6 @@ FontAwesomeConfig = { autoReplaceSvg: 'nest' };
 $(document).ready(function () {
     var items = $(".slider .items");
     var active = $(".slider .active");
-    var dots = $(".slider .dot-nav .dot");
     var visible;
 
     // Defining Total Number of Images
@@ -43,6 +42,13 @@ $(document).ready(function () {
 
     // Calling Arrow Toggler Function in Global
     ArrowToggler();
+
+    // Addition of Nav-dots
+    for (i = 0; i < items.length; i++) {
+        $(".dot-nav").append($("<span class='dot'></span>"));
+    }
+    $(".dot-nav .dot").first().addClass("clicked");
+    var dots = $(".slider .dot-nav .dot");
 
     // Previous Btn
     $("#prev").click(function () {
